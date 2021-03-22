@@ -1,0 +1,327 @@
+@font-face{
+  src: url(../fonts/quicksand-light.ttf);
+  font-family: quicksand-light;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background: #ffffff50;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover{
+  background: #ffffffc0;
+}
+body {
+  background: #000000;
+  font-family: quicksand-light;
+}
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  min-width: 360px;
+  margin: auto;
+}
+.flex_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  height: 200px;
+  background-image: url(../img/genos-one-punch-man-3219.webp);
+  background-size: 100%;
+}
+.headerContainer {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0) 100%);
+  height: 100%;
+}
+header .logo {
+  text-align: center;
+  color: #ffffff;
+}
+.bg_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: #00000050;
+}
+nav.menu {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 300px;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background: #000000c0;
+  border-right: solid 0.5px #ffffff50;
+  transition: all 0.4s;
+}
+.bt_menu {
+  padding: 12px;
+  background: #ffffff50;
+  text-align: right;
+  width: 100%;
+  height: 50px;
+  color: #ffffff;
+  font-size: 30px;
+}
+.menu ul li {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.menu ul li a {
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+.menu ul li a.a_text {
+  color: #ffffff50;
+  width: 250px;
+  border-bottom: solid 0.5px transparent;
+  border-image: linear-gradient(to left, #00000000 0%, #ffffff50 50%, #00000000 100%) 1;
+}
+.menu ul li a.a_icon {
+  color: #ffffff50;
+  font-size: 30px;
+  padding: 0;
+  margin-top: 10px;
+  width: 50px;
+}
+nav.menu:hover {
+  border-right: solid 0.5px #ffffffc0;
+}
+.menu ul li a:hover{
+  color: #ffffffc0;
+}
+.widget {
+  background: #000000c0;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  margin-bottom: 10px;;
+  border-top: solid 0.5px transparent;
+  border-bottom: solid 0.5px transparent;
+  border-image: linear-gradient(to left, #00000000 0%, #ffffff50 50%, #00000000 100%) 1;
+}
+.widget article {
+  display: flex;
+  padding: 10px 50px;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+.widget article::-webkit-scrollbar {
+  display: none;
+}
+.widget article a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffffc0;
+  margin: 0 30px;
+  display: block;
+  font-size: 12px;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+.widget article a:hover {
+  box-shadow: 0 0 15px #ffffff;
+  color: #ffffff;
+}
+.widget article a img {
+  width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.widget article a figcaption {
+  position: absolute;
+  background: linear-gradient(0deg, #000000 25%, #00000000 100%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  border-radius: 0 0 5px 5px;
+}
+.disc_slider {
+  padding: 0 5px;
+  text-decoration: none;
+  color: #ffffff50;
+  font-size: 10px;
+  transition: color 0.4s; 
+}
+.disc_slider:hover {
+  color: #ffffff;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+/*////////////////////////-Aside-////////////////////////*/
+.icon-space {
+  padding-right: 10px;
+}
+aside {
+  padding: 20px;
+  width: 100%;
+  border-right: solid 0.5px transparent;
+  border-image: linear-gradient(to top, #00000000 0%, #ffffff50 50%, #00000000 100%) 1;
+}
+aside ul li {
+  list-style: none;
+  width: 100%;
+}
+aside ul li a {
+  text-align: left;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ffffff50;
+  margin: 10px;
+  padding: 10px;
+}
+section article h2{
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid 0.5px transparent;
+  border-image: linear-gradient(to left, #00000000 0%, #ffffff50 50%, #00000000 100%) 1;
+}
+.ultimos_ep {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.ultimos_ep a {
+  width: 180px;
+  height: 120px;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+  border-bottom: solid 0.5px transparent;
+  border-image: linear-gradient(to left, #000000 0%, #ffffff 50%, #000000 100%) 1;
+}
+
+.ultimos_ep a figure img {
+  width: 180px;
+  height: 120px;
+  transition: 0.2s;
+  transform: scale(1);
+  object-fit: cover;
+}
+.ultimos_ep a figure img:hover {
+  transform: scale(1.2);
+}
+
+.ultimos_ep a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000c0;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 10px;
+  margin: 3px;
+}
+.ultimos_ep a strong {
+  font-size: 14px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(0deg, #000000 0%, #00000000 100%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px 3px;
+}
+.ultimos_an {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.ultimos_an a {
+  position: relative;
+  width: 180px;
+  height: 256px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 40px 10px;
+  transition: 0.8s;
+  transition-delay: 0.2s;
+}
+.ultimos_an a figure img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.ultimos_an a:hover {
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 5px;
+}
+.ultimos_an a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  background: #0ead00c0;
+  padding: 5px 0 20px 0;
+  font-size: 16px;
+  clip-path: polygon(80% 0%, 80% 40%, 50% 80%, 20% 40%, 20% 0);
+
+}
+.ultimos_an a i {
+  opacity: 0;
+  position: absolute;
+  background: #0000006b;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  transition: 0.2s;
+  line-height: 256px;
+}
+.ultimos_an a i:hover {
+  opacity: 1;
+}
+.ultimos_an a strong {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px 3px;
+}
+
+
+
+footer {
+  text-align: center;
+}
+footer p {
+  color: #ffffffc0;
+}
